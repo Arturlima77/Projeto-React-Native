@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@react-navigation/native-stack": "^6.9.2",
-    "expo": "^47.0.7",
-    "react-native": "0.70.5",
-    "start": "^5.1.0"
-  }
-}
