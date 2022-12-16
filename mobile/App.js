@@ -1,13 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Img from './components/Img'
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Nome from './src/Page1';
+import Imagem from './src/Page2';
+
+const Stack = createNativeStackNavigator();
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Img />
-      <Text style={styles.text}>Artur Lima</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Page1" component={Nome} />
+        <Stack.Screen name="Imagem" component={Imagem} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
